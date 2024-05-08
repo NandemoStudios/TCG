@@ -42,7 +42,7 @@ def PageNotFound(e):
 
 @app.errorhandler(400)
 def BadRequest(e):
-    return "<h1> Bad Request </h1>"
+    return render_template("404.html")
 
 @app.route('/')
 def homepage():
