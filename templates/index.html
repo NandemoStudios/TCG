@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
 </head>
-<body>
+<body style="text-align: center;">
 <h1>Search</h1>
 <form method="POST">
-<input name="Card"/>
-<button value="Search" name="Search">Search</button>
+<input name="Card" class="CardInput" list="TopCards"/>
+    <datalist id="TopCards">
+                <option value="Pikachu">Pikachu</option>
+                <option value="Unown">Unown</option>
+                <option value="Eevee">Eevee</option>
+                <option value="Raichu">Raichu</option>
+                <option value="Meowth">Meowth</option>
+                <option value="Charizard">Charizard</option>
+                <option value="MewTwo">MewTwo</option>
+                <option value="Lucario">Lucario</option>
+                <option value="Vulpix">Vulpix</option>
+                <option value="Reyquaza">Reyquaza</option>
+            </datalist>
+    <br>
+    <br>
+<button value="Search" name="Search" class="HomeButton">Search</button>
 </form>
 </body>
 </html>

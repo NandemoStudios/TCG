@@ -1,4 +1,25 @@
+.HomeButton{
+    background-color: #555555;
+    border-radius: 8px;
+    border: none;
+}
+
 .CardDiv {
-    text-align: center;
-    border-style: solid;
+	text-align: center;
+	border-style: solid;
+	border-radius: 25px;
+	font-family: Verdana, sans-serif;
+}
+
+.title{
+	font-family: Verdana, sans-serif;
+}
+
+.Body{
+	text-align: center;
+	padding: 25px;
+}
+
+.CardInput {
+	width: 80%;
 }

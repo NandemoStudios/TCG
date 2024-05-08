@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="{{url_for('static', filename='js/redirect.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/CardView.css') }}"/>
+</head>
+<h1>
+    {{ card.name }}
+    <button onclick="SendHome()">Home</button>
+</h1>
+<body>
+    <div class="CardDetails">
+        <img src="{{ card.images.large }}" width="367" height="512" class="CardImage"/>
+        <div class="TextInfo">
+            {% if card.hasAbilities == True %}
+                <div class="abilities TraitDiv">
+                    {{ card.abilities }}
+                </div>
+            {% endif %}
+            <div class="attacks TraitDiv">
+                <h2><b>Attacks</b></h2>
+            {% for attack in card.attacks %}
+                <div class="attackDiv">
+                    <h3> {{ attack.name }} </h3>
+                    <p>Cost: {{ attack.convertedEnergyCost }}</p>
+                    <p>Damage: {{ attack.damage }}</p>
+                    <p>Description: {{ attack.text }}</p>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

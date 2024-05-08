@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title class="title">
+    Search: {{ search }}
+</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/redirect.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}"/>
+</head>
+<h1>
+ {{ itemsfound }} results For {{ search }}
+</h1>
+<body class="Body">
+<form method="POST" name="home" value="Home" type="submit">
+<button value="Home" name="Home" class="HomeButton"> Home </button>
+</form>
+<div class="gridContainer">
+{% for card in Cards %}
+<tr>
+    <div id=" {{ card.id }}" class="CardDiv">
+        <h3>
+            {{ card.id }}
+        </h3>
+        <br>
+        {% if card.isCached == True %}
+            <img src={{ url_for('static', filename='/img/'+card.id+'.png') }} width='300' height='412'/>
+        <script>
+            console.log('{{ card.isCached }}')
+        </script>
+        {% else %}
+            <img src={{ card.images.large }} width='300' height='412'/>
+        {% endif %}
+        <p>
+            <b>set:</b> {{ card.set.name }}
+                <button value="{{card.id}}" onclick='showCard(this.value)'>
+                    See More
+                </button>
+            </form>
+        </p>
+    </div>
+</tr>
+    </div>
+<br>
+{% endfor %}
+</body>
+</html>

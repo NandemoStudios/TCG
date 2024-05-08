@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);
+}
+
+body {
+    background-color: gray;
+}
+
+.CardDetails{
+    text-align: center;
+    background-color: gray;
+}
+
+.CardImage{
+    -webkit-filter: drop-shadow(5px 5px 5px #222); filter: drop-shadow(5px 5px 5px #222);
+}
+
+.TraitDiv {
+    border-style: solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.attackDiv {
+    border-style: solid;
+    border-radius: 6px;
+    padding: 5px;
+}
