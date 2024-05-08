@@ -36,6 +36,10 @@ def DownloadPhotoOld(card):
         images.append(f)
         f.close()
 
+@app.errorhandler(404)
+def PageNotFound(e):
+    return render_template("404.html")
+
 @app.route('/')
 def homepage():
     return render_template('index.html')
