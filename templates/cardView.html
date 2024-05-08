@@ -13,7 +13,9 @@
         <div class="TextInfo">
             {% if card.hasAbilities == True %}
                 <div class="abilities TraitDiv">
-                    {{ card.abilities }}
+                    <b>{{ card.abilities.name }}</b>
+                    <br>
+                    {{ card.abilities.text }}
                 </div>
             {% endif %}
             <div class="attacks TraitDiv">
