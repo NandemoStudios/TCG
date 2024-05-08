@@ -64,8 +64,8 @@ def loadPokemon():
             else:
                 card.isCached = False
             card.cardPrice = 0.0
-            cardPriceGBP = round(c.convert(card.cardPrice, 'USD', 'GBP'), 2)
-            card.cardPriceGBP = cardPriceGBP
+            #cardPriceGBP = round(c.convert(card.cardPrice, 'USD', 'GBP'), 2)
+            #card.cardPriceGBP = cardPriceGBP
         return render_template("results.html", Cards=cards, search=text, itemsfound=len(cards), css='./static/results.css')
     if request.form.get('Home') == 'Home':
         return render_template('index.html')
