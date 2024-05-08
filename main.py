@@ -1,13 +1,7 @@
-import json
-import threading
 from pokemontcgsdk import Card, Set, Type, Supertype, Subtype, Rarity, RestClient
 from flask import Flask, render_template, request, redirect
 import requests
 import os
-from currency_converter import CurrencyConverter
-import sys
-
-c = CurrencyConverter()
 
 app = Flask(__name__)
 
