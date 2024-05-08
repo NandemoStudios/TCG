@@ -40,6 +40,10 @@ def DownloadPhotoOld(card):
 def PageNotFound(e):
     return render_template("404.html")
 
+@app.errorhandler(400)
+def BadRequest(e):
+    return "<h1> Bad Request </h1>"
+
 @app.route('/')
 def homepage():
     return render_template('index.html')
