@@ -13,9 +13,11 @@
         <div class="TextInfo">
             {% if card.hasAbilities == True %}
                 <div class="abilities TraitDiv">
-                    <b>{{ card.abilities.name }}</b>
-                    <br>
-                    {{ card.abilities.text }}
+                    {% for ability in card.abilities %}
+                        <b>{{ ability.name }}</b>
+                        <br>
+                        {{ ability.text }}
+                    {% endfor %}
                 </div>
             {% endif %}
             <div class="attacks TraitDiv">
